@@ -7,5 +7,7 @@
 
 ## Importing data
 
-* [Uploading files](start/upload.md)
-* [Configure CSV properties](start/configure.md)
+* [Uploading files](docs/upload.md)
+* [Configure import](docs/configure.md)
+* [Set roles for columns](docs/roles.md)
+* [Map data](docs/map.md)
