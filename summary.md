@@ -11,3 +11,7 @@
 * [Configure import](docs/configure.md)
 * [Set roles for columns](docs/roles.md)
 * [Map data](docs/map.md)
+
+## Errors and trouble shooting
+
+* [Token errors](docs/token_errors.md)
