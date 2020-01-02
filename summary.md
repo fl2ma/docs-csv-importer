@@ -20,3 +20,6 @@
 ## Errors and trouble shooting
 
 * [Token errors](docs/errors/token_errors.md)
+* [Often seen errors](docs/errors/freq_errors.md)
+* [Frequently Asked Questions](docs/errors/freq_questions.md)
+* [Bad CSV files](docs/errors/bad_files.md)
