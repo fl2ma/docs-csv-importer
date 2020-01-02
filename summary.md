@@ -2,16 +2,20 @@
 
 ## Installing and running
 
-* Docker
-* Self-hosted
+* [Docker](docs/install/docker.md)
+* [Self-hosted](docs/install/self_hosted.md)
+
+## Upgrading
+
+* [Upgrade](docs/upgrade/upgrade.md)
 
 ## Importing data
 
-* [Uploading files](docs/upload.md)
-* [Configure import](docs/configure.md)
-* [Set roles for columns](docs/roles.md)
-* [Map data](docs/map.md)
+* [Uploading files](docs/usage/upload.md)
+* [Configure import](docs/usage/configure.md)
+* [Set roles for columns](docs/usage/roles.md)
+* [Map data](docs/usage/map.md)
 
 ## Errors and trouble shooting
 
-* [Token errors](docs/token_errors.md)
+* [Token errors](docs/errors/token_errors.md)
