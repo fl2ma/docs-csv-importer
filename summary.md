@@ -4,6 +4,7 @@
 
 * [Docker](docs/install/docker.md)
 * [Self-hosted](docs/install/self_hosted.md)
+* [Configuration](docs/install/configure.md)
 
 ## Upgrading
 
