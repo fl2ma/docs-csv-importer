@@ -15,3 +15,7 @@ If you don't specifically configure the importer to import non-unique rows, open
 The CSV importer is capable of merging two transactions (one from A > B, and one from B < A) if they seem to be the same transaction listed twice. For example, when you import two files: one from your checking account and one from your savings account.
 
 If they don't have the same description, this won't work. You'll have to manually edit your file so the transactions are the same.
+
+## Other issues?
+
+Please open a ticket [on GitHub](https://github.com/firefly-iii/firefly-iii/).
