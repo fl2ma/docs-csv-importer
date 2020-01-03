@@ -1,3 +1,3 @@
 # Frequently Asked Questions
 
-Will be here.
+There are no frequently asked questions yet.

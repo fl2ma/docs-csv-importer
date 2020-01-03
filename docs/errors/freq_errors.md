@@ -1,3 +1,3 @@
-# Frequently seen errors
+# Frequently seen issues
 
-Will be here.
+There are no frequently seen errors or problems yet.
