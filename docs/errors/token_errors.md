@@ -10,6 +10,10 @@ The token you've configured doesn't give access to this instance of Firefly III
 
 The CSV importer can't find the host where your Firefly III instance is running.
 
+## Your Firefly III version X is below the minimum required version Y
+
+The error says it all, really.
+
 ## Other errors?
 
 Please open a ticket [on GitHub](https://github.com/firefly-iii/firefly-iii/).
