@@ -39,7 +39,7 @@ If you have no sudo rights, you can simply [download composer](https://getcompos
 
 This concludes the server preparations. If you're having trouble with (parts of) this step, please check out the :ref:`Server FAQ <faqselfhosted>`.
 
-## Installing Firefly III
+## Installing Firefly III CSV importer
 
 ### Main command
 
@@ -57,7 +57,7 @@ If this gives an error because of access rights, prepend the command with `sudo`
 
 ```bash   
 sudo chown -R www-data:www-data csv-importer
-sudo chmod -R 775 firefly-iii/storage
+sudo chmod -R 775 csv-importer/storage
 ```
 
 ### Configuration
@@ -74,4 +74,4 @@ Browsing to the site should be easy. You should see the following screen, if you
 
 ![Opening screen of the CSV importer.](images/opening.png)
 
-If this is not the case, or something is broken, be sure to open [an issue on GitHub](https://github.com/firefly-iii/csv-importer).
+If this is not the case, or something is broken, be sure to open [an issue on GitHub](https://github.com/firefly-iii/firefly-iii).

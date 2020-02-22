@@ -17,6 +17,7 @@
 * [Configuring your import](docs/usage/configure.md)
 * [Setting roles for columns](docs/usage/roles.md)
 * [Mapping data](docs/usage/map.md)
+* [Importing over command line](docs/usage/command_line.md)
 
 ## Errors and trouble shooting
 

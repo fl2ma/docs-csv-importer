@@ -14,6 +14,10 @@ The CSV importer can't find the host where your Firefly III instance is running.
 
 The error says it all, really.
 
+## 500 Internal Server Error
+
+Something is seriously wrong with your installation. Fix that first.
+
 ## Other errors?
 
 Please open a ticket [on GitHub](https://github.com/firefly-iii/firefly-iii/).
