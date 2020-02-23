@@ -31,7 +31,7 @@ Change `docker run` to `docker run -d` to make sure the image runs in the backgr
 
 ## Run inline
 
-This command will launch the CSV importer which will then try to import whatever it finds in the current directory. This is fully automated. It works by mounting a directory of your choice to `/import` and importing all CSV files found inside of it.	
+This command will launch the CSV importer which will then try to import whatever it finds in the current directory. This is fully automated. It works by mounting the current directory to `/import` and importing all CSV files found inside of it.
 
 ```
 docker run \
@@ -42,6 +42,8 @@ docker run \
 -e WEB_SERVER=false \
 jc5x/csv-importer:develop
 ```
+
+In order for this to work, each CSV file must be accompanied by a JSON configuration file. So `import-file.csv` must be accompanied by `import-file.json`.
 
 This can also be made easier for yourself:
 
