@@ -1,6 +1,8 @@
 # Docker
 
-There are two ways to use the CSV importer with Docker.
+There are a few ways to use the CSV importer with Docker.
+
+There are some *gotchas* when it comes to Docker and IP addresses, so please check out the instructions at the bottom of the page.
 
 ## Run as a web server
 
@@ -49,3 +51,50 @@ This can also be made easier for yourself:
 ### Use pre-defined script
 
 Use [run-inline.sh](https://github.com/firefly-iii/csv-importer-docker/blob/master/run-inline.sh) to make it easier to manage your Personal Access Token. You can also customize the directory that the script will use as well.
+
+## Docker and IP addresses
+
+If you run the CSV Importer, the IP address you need to contact Firefly III isn't 127.0.0.1, even when you run Firefly III on the same machine. Docker uses an internal network. There's a good chance your Firefly III installation has an IP address that starts with 172.17. You can find out the internal IP address of Firefly III using this command:
+
+```
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' CONTAINER
+```
+
+Instead of `CONTAINER`, use the container ID of your Firefly III installation.
+
+If your Firefly III installation is online, you can also use the web address. If you want to, you can generate a Personal Access Token on the [demo site](https://demo.firefly-iii.org/) and use that.
+
+### Example scripts for a full setup
+
+```
+# run a basic MariaDB instance.
+docker run --name mariadb -e MYSQL_ROOT_PASSWORD=super_secret -e MYSQL_DATABASE=fireflyiii -d mariadb:latest
+
+# get the IP of the MariaDB instance:
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mariadb
+
+# run a basic Firefly III instance (update the IP of the database if necessary)
+docker run -d \
+--name fireflyiii \
+-v firefly_iii_export:/var/www/firefly-iii/storage/export \
+-v firefly_iii_upload:/var/www/firefly-iii/storage/upload \
+-p 80:80 \
+-e APP_KEY=123456789012345678901234567890aa \
+-e DB_HOST=172.17.0.2 \
+-e DB_CONNECTION=mysql \
+-e DB_PORT=3306 \
+-e DB_DATABASE=fireflyiii \
+-e DB_USERNAME=root \
+-e DB_PASSWORD=super_secret \
+jc5x/firefly-iii:latest
+
+# Chase the log files to see when Firefly III is ready to go:
+docker logs -f $(docker container ls -a -f name=fireflyiii --format="{{.ID}}")
+
+# get Firefly III IP address:
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker container ls -a -f name=fireflyiii --format="{{.ID}}")
+
+# Adapt run-inline.sh and run it using your personal access token
+./run-inline.sh
+
+```
