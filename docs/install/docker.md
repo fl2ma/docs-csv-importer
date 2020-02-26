@@ -8,7 +8,7 @@ There are some *gotchas* when it comes to Docker and IP addresses, so please che
 
 This is the easiest way to run the CSV importer. Simply use the following run command to launch the CSV importer.
 
-```
+```bash
 docker run \
 --rm \
 -e FIREFLY_III_ACCESS_TOKEN= \
@@ -34,7 +34,7 @@ Change `docker run` to `docker run -d` to make sure the image runs in the backgr
 
 This command will launch the CSV importer which will then try to import whatever it finds in the current directory. This is fully automated. It works by mounting the current directory to `/import` and importing all CSV files found inside of it.
 
-```
+```bash
 docker run \
 --rm \
 -v $PWD:/import \
@@ -56,7 +56,7 @@ Use [run-inline.sh](https://github.com/firefly-iii/csv-importer-docker/blob/mast
 
 If you run the CSV Importer, the IP address you need to contact Firefly III isn't 127.0.0.1, even when you run Firefly III on the same machine. Docker uses an internal network. There's a good chance your Firefly III installation has an IP address that starts with 172.17. You can find out the internal IP address of Firefly III using this command:
 
-```
+```bash
 docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' CONTAINER
 ```
 
@@ -66,7 +66,7 @@ If your Firefly III installation is online, you can also use the web address. If
 
 ### Example scripts for a full setup
 
-```
+```bash
 # run a basic MariaDB instance.
 docker run --name mariadb -e MYSQL_ROOT_PASSWORD=super_secret -e MYSQL_DATABASE=fireflyiii -d mariadb:latest
 
@@ -95,6 +95,8 @@ docker logs -f $(docker container ls -a -f name=fireflyiii --format="{{.ID}}")
 docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker container ls -a -f name=fireflyiii --format="{{.ID}}")
 
 # Adapt run-inline.sh and run it using your personal access token
+# You can find it here: https://github.com/firefly-iii/csv-importer-docker/blob/master/run-inline.sh
+
 ./run-inline.sh
 
 ```
