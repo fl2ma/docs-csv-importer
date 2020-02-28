@@ -66,6 +66,8 @@ If your Firefly III installation is online, you can also use the web address. If
 
 ### Example scripts for a full setup
 
+The commands below set up a basic MariaDB instance and an installation of Firefly III. It will then start the importer. This is just to show you what the relationship is between these different Docker images.
+
 ```bash
 # run a basic MariaDB instance.
 docker run --name mariadb -e MYSQL_ROOT_PASSWORD=super_secret -e MYSQL_DATABASE=fireflyiii -d mariadb:latest
