@@ -62,7 +62,7 @@ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' CON
 
 Instead of `CONTAINER`, use the container ID of your Firefly III installation.
 
-If your Firefly III installation is online, you can also use the web address. If you want to, you can generate a Personal Access Token on the [demo site](https://demo.firefly-iii.org/) and use that.
+If your Firefly III installation is online, you can also use the web address. If you want to, you can generate a Personal Access Token on the [demo site](https://demo.firefly-iii.org/) and use the demo site as a test. Keep in mind that the demo site is public to everybody so everyone will see what you import.
 
 ### Example scripts for a full setup
 
