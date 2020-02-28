@@ -35,15 +35,15 @@ Verify the installation of composer using the following command.
 composer -v
 ```
 
-If you have no sudo rights, you can simply [download composer](https://getcomposer.org/download/) with the instructions under the header "manual download". Use `php composer.phar` instead of `composer` in the instructions ahead.
+If you have no sudo rights, you can simply [download composer](https://getcomposer.org/download/). Use `php composer.phar` instead of `composer` in the instructions ahead.
 
-This concludes the server preparations. If you're having trouble with (parts of) this step, please check out the :ref:`Server FAQ <faqselfhosted>`.
+This concludes the server preparations. If you're having trouble with (parts of) this step, please check out [the FAQ](https://firefly-iii.gitbook.io/firefly-iii-csv-importer/errors-and-trouble-shooting/freq_questions) or open an issue [on GitHub](https://github.com/firefly-iii/firefly-iii).
 
 ## Installing Firefly III CSV importer
 
 ### Main command
 
-Browse to `/var/www` which is probably the directory where your web server is configured to find its files.
+Browse to `/var/www` which is probably the directory where your web server is configured to find its files. This depends on your own server of course.
 
 Enter the following command. 
 
@@ -60,13 +60,15 @@ sudo chown -R www-data:www-data csv-importer
 sudo chmod -R 775 csv-importer/storage
 ```
 
+In general, these access rights aren't terrible important for the CSV importer, as long as your web server can read all the files.
+
 ### Configuration
 
-In the `csv-importer` directory you will find a `.env` file. Open this file using your favorite editor. There are instructions what to do in this file.
+In the `csv-importer` directory you will find a `.env` file. Open this file using your favorite editor. There are instructions what to do in this file. If you can't find this file, copy `.env.example` into `.env` and voila!
 
 ## Accessing the CSV importer
 
-It depends on your installation and web server, but usually you can access the CSV importer over [http://localhost/](http://localhost/). If this URL is taken by Firefly III already, make sure your server configuration accepts both.
+It depends on your installation and web server, but usually you can access the CSV importer over [http://localhost/](http://localhost/). If this URL is taken by Firefly III already, make sure your server configuration accepts both. This is called a "virtual host".
 
 ### Browsing to site
 
@@ -74,4 +76,4 @@ Browsing to the site should be easy. You should see the following screen, if you
 
 ![Opening screen of the CSV importer.](images/opening.png)
 
-If this is not the case, or something is broken, be sure to open [an issue on GitHub](https://github.com/firefly-iii/firefly-iii).
+If this is not the case, or something is broken, be sure to open [an issue on GitHub](https://github.com/firefly-iii/firefly-iii) or check out [the FAQ](https://firefly-iii.gitbook.io/firefly-iii-csv-importer/errors-and-trouble-shooting/freq_questions).
