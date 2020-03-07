@@ -21,12 +21,12 @@ docker stop <container>
 docker rm <container>
 ```
 
-To find out which container is the Firefly III CSV importer, run `docker container ls -a` and look for `jc5x/csv-importer`.
+To find out which container is the Firefly III CSV importer, run `docker container ls -a` and look for `fireflyiii/csv-importer`.
 
 Then pull the new image using this command:
 
 ```bash
-docker pull jc5x/csv-importer:latest
+docker pull fireflyiii/csv-importer:latest
 ```
 
 Create it again by running the command from the installation guide.
