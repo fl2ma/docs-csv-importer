@@ -39,3 +39,5 @@ Here you'll find some fixes for common problems with bank's CSV files.
 ## Other options
 
 If you want to, check the "skip form" button so you don't have to go through these options each time you start an import.
+
+![Upload configuration.](./images/config.png)

@@ -14,3 +14,8 @@ Configuration files contain instructions for the CSV processing. You can find a 
 
 - The file must be UTF8 encoded.
 - No extra text may be present before or after the data.
+
+
+
+
+![Upload files.](./images/upload.png)
