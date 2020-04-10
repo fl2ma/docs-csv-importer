@@ -18,8 +18,10 @@
 * [Mapping data](docs/usage/map.md)
 * [Importing over command line](docs/usage/command_line.md)
 
+
 ## Errors and trouble shooting
 
+* [Duplicate transactions](docs/errors/duplicate_transactions.md)
 * [Token errors](docs/errors/token_errors.md)
 * [Frequently seen issues](docs/errors/freq_errors.md)
 * [Frequently asked questions](docs/errors/freq_questions.md)
