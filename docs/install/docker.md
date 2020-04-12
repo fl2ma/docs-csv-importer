@@ -102,3 +102,18 @@ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(d
 ./run-inline.sh
 
 ```
+
+## Docker and reverse proxies
+
+Set the `TRUSTED_PROXIES` environment variable to the IP of your reverse proxy or `**`.
+
+Make sure you properly configure your reverse proxy to forward the right info, like so for nginx.
+
+
+```
+proxy_set_header X-Forwarded-Host $host;
+proxy_set_header X-Forwarded-Server $host;
+proxy_set_header X-Forwarded-Proto $scheme;
+proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+proxy_set_header Host $host;
+```
