@@ -6,6 +6,10 @@
 * [Self-hosted](docs/install/self_hosted.md)
 * [Configuration](docs/install/configure.md)
 
+## Help
+
+* [The JSON file](help/json.md)
+
 ## Upgrading
 
 * [Upgrading](docs/upgrade/upgrade.md)
