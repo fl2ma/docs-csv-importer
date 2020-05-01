@@ -8,7 +8,7 @@
 
 ## Help
 
-* [The JSON file](help/json.md)
+* [The JSON file](docs/help/json.md)
 
 ## Upgrading
 
