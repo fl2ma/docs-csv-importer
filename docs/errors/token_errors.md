@@ -1,10 +1,15 @@
-# Errors
+# Personal Access Token errors
 
 Once you've added your Personal Access Token to the CSV Importer, you can run into several errors that maybe difficult to diagnose. Here are some common ones:
 
+First, always remember:
+
+- Do not use the "command line token". That's the wrong one.
+- Do not use the "APP_KEY". That's the wrong one.
+
 ## 401 Unauthorized
 
-The token you've configured doesn't give access to this instance of Firefly III
+The Personal Access Token you've configured doesn't give access to this instance of Firefly III. Double check that your Personal Access Token is correct. Make sure that it starts with "ey". No spaces at the end. No newlines.
 
 ## Could not resolve host
 

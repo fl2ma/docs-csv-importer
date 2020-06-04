@@ -26,7 +26,7 @@
 ## Errors and trouble shooting
 
 * [Duplicate transactions](docs/errors/duplicate_transactions.md)
-* [Token errors](docs/errors/token_errors.md)
+* [Personal Access Token errors](docs/errors/token_errors.md)
 * [Frequently seen issues](docs/errors/freq_errors.md)
 * [Frequently asked questions](docs/errors/freq_questions.md)
 * [Bad CSV files](docs/errors/bad_files.md)
