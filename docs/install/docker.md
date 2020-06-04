@@ -16,7 +16,7 @@ docker run \
 -e FIREFLY_III_ACCESS_TOKEN= \
 -e FIREFLY_III_URI= \
 -p 8081:80 \
-fireflyiii/csv-importer:develop
+fireflyiii/csv-importer:latest
 
 ```
 
@@ -43,7 +43,7 @@ docker run \
 -e FIREFLY_III_ACCESS_TOKEN= \
 -e FIREFLY_III_URI= \
 -e WEB_SERVER=false \
-fireflyiii/csv-importer:develop
+fireflyiii/csv-importer:latest
 ```
 
 In order for this to work, each CSV file must be accompanied by a JSON configuration file. So `import-file.csv` must be accompanied by `import-file.json`.

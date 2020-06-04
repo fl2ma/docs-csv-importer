@@ -26,7 +26,7 @@ To find out which container is the Firefly III CSV importer, run `docker contain
 Then pull the new image using this command:
 
 ```bash
-docker pull fireflyiii/csv-importer:develop
+docker pull fireflyiii/csv-importer:latest
 ```
 
 Create it again by running the command from the installation guide.
