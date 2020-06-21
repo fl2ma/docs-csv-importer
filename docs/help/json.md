@@ -95,11 +95,67 @@ A role for each column.
 
 ### do_mapping
 
-Whether or not these columns should be mapped to data in your Firefly III installation.
+Whether or not these columns should be mapped to data in your Firefly III installation. So for each column, it will tell the CSV importer if it should use the mapping in the next array. In the user interface, this is indicated by little check boxes after each column.
+
+Here are some examples:
+
+```json
+{
+"do_mapping": [ true, true, false]
+}
+```
+
+Column 0 and column 1 should be mapped, and column 2 should not. Keep in mind that the array counts from 0, so in your CSV file this would indicate: map the first two columns but don't map the third column.
+
+In some JSON files, the order of `true` and `false` gets mixed up, which is why you'll see something like this:
+
+```json
+{
+	"do_mapping": {
+		"0": true,
+		"2": false,
+		"1": true
+	}
+}
+```
+
+What you see here is the same thing as the previous example. Map the first two columns, don't map the last one.
 
 ### mapping
 
-The mapping. The value in brackets is what's found in the CSV file, the ID links to the account in your Firefly III installation.
+The mapping. The value in brackets is what's found in the CSV file, the ID links to the account in your Firefly III installation. Here are some examples:
+
+```json
+{
+	"0": {
+		"Groceries": 3,
+		"Grozeries": 3,
+		"Bills": 2,
+		"Going out": 21
+	}
+
+}
+```
+
+The 0 in this example refers to the first column. What kind of a colum this is I don't know. Doesn't matter for the example. It looks like categories. What this means is that if column `0` contains either `Groceries` or the misspelled variant, this should be linked to category 3. 
+
+Another example:
+
+```json
+{
+	"4": {
+		"NL21INGB9861487085": 15,
+		"NL35ABNA6289099205": 23,
+		"289099205": 23,
+	}
+
+}
+```
+
+This example maps the account numbers in column 4 (so the fifth one) to accounts in Firefly III.
+
+Each column has their own mapping.
+
 
 ### version
 
