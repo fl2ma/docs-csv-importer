@@ -1,5 +1,9 @@
 # Frequently Asked Questions
 
+## How do I start over or reset the importer?
+
+Browse to `/flush` on your CSV importer.
+
 ## My connection times out, even though the IP addresses are correct
 
 This applies to Docker. Make sure that both containers [are on the same network](https://old.reddit.com/r/FireflyIII/comments/fuur8o/csvimporter_connection_timeout/).
