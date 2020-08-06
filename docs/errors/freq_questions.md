@@ -6,7 +6,7 @@ Browse to `/flush` on your CSV importer. This will reset it.
 
 ## My connection times out, even though the IP addresses are correct
 
-This applies to Docker. Make sure that both containers [are on the same network](https://old.reddit.com/r/FireflyIII/comments/fuur8o/csvimporter_connection_timeout/).
+This applies to Docker. Make sure that both containers [are on the same network](https://old.reddit.com/r/FireflyIII/comments/fuur8o/csvimporter_connection_timeout/). Remember that Firefly III runs on port 8080.
 
 Please open a ticket [on GitHub](https://github.com/firefly-iii/firefly-iii/).
 
