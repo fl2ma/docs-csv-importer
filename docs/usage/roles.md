@@ -93,7 +93,20 @@ The Firefly III can import space and comma separated tags.
 
 ### Note(s)
 
-Any notes you wish to import
+Any notes you wish to import.
+
+Multilines notes spanning to more than one line can be imported, just remember to close quotes correctly and to use [markdown format](https://www.markdownguide.org/basic-syntax/#line-breaks):
+
+> ```
+> "this","is my","csv line","with my notes: to add a newline, finish a sentence with two spaces  
+> and continue on the next line
+> 
+> or give a double enter"
+> ```
+
+In Firefly III you'll see the notes this way:
+
+![How your notes will be presentend in Firefly III](./images/multiline-notes-sample.png)
 
 ### Debit/credit indicator
 
