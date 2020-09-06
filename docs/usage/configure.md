@@ -18,6 +18,8 @@ Select the field separator of our CSV file. This is almost always a comma.
 
 Use this box to set the date format as it can be found in your file. You can use the format as described [on this page](https://www.php.net/manual/en/function.date.php).
 
+When you suffer from a bank that sends you CSV files with localized dates like the Dutch `24 mei 2020`, you can prepend your date format with a country code so the local date will be parsed correctly: `nl:d F Y`.
+
 ## Import options
 
 ### Default import account
