@@ -1,12 +1,12 @@
 # Self hosted
 
-In order to run the CSV importer on your own machine, you'll need You need a working LAMP, LEMP or WAMP running PHP 7.3 and access to the command line. The installation routine for the CSV importer is basically the same as it is for Firefly III itself.
+In order to run the CSV importer on your own machine, you'll need You need a working LAMP, LEMP or WAMP running PHP 7.4 and access to the command line. The installation routine for the CSV importer is basically the same as it is for Firefly III itself.
 
-If you don't have one, search the web to find out how to get one. Make sure you're running PHP 7.3. There are many tutorials that will help you install one. Here are some Google queries to help you.
+If you don't have one, search the web to find out how to get one. Make sure you're running PHP 7.4. There are many tutorials that will help you install one. Here are some Google queries to help you.
 
-1. [Install a LAMP stack with PHP 7.3](https://www.google.com/search?q=lamp+stack+php+7.3)
-2. [Upgrade Ubuntu PHP 7.3](https://www.google.com/search?q=upgrade+ubuntu+php+7.3)
-3. [PHP 7.3 raspberry pi](https://www.google.nl/search?q=PHP+7.3+raspberry+pi)
+1. [Install a LAMP stack with PHP 7.4](https://www.google.com/search?q=lamp+stack+php+7.4)
+2. [Upgrade Ubuntu PHP 7.4](https://www.google.com/search?q=upgrade+ubuntu+php+7.4)
+3. [PHP 7.4 raspberry pi](https://www.google.nl/search?q=PHP+7.4+raspberry+pi)
 
 You won't need to set up a database.
 
@@ -72,8 +72,8 @@ It depends on your installation and web server, but usually you can access the C
 
 ### Browsing to site
 
-Browsing to the site should be easy. You should see the following screen, if your personal access token is configured correctly.
+Browsing to the site should be easy. You should see the following screen.
 
 ![Opening screen of the CSV importer.](images/opening.png)
 
-If this is not the case, or something is broken, be sure to open [an issue on GitHub](https://github.com/firefly-iii/firefly-iii) or check out [the FAQ](https://firefly-iii.gitbook.io/firefly-iii-csv-importer/errors-and-trouble-shooting/freq_questions).
+If this is not the case, or something is broken, be sure to open [an issue on GitHub](https://github.com/firefly-iii/firefly-iii) or check out [the FAQ](../errors/freq_questions.md).

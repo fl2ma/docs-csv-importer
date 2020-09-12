@@ -1,6 +1,6 @@
 # Personal Access Token errors
 
-Once you've added your Personal Access Token to the CSV Importer, you can run into several errors that maybe difficult to diagnose. Here are some common ones:
+If you configure the CSV importer to use Personal Access Tokens, and you've added your Personal Access Token to the CSV Importer, you can run into several errors that maybe difficult to diagnose. Here are some common ones:
 
 First, always remember:
 
@@ -13,7 +13,7 @@ The Personal Access Token you've configured doesn't give access to this instance
 
 ## Could not resolve host
 
-The CSV importer can't find the host where your Firefly III instance is running.
+The CSV importer can't find the host where your Firefly III instance is running. This is often the problem when using Docker and the devices can't reach eachother.
 
 ## Your Firefly III version X is below the minimum required version Y
 

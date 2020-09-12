@@ -10,7 +10,7 @@ Always upload the CSV file from your bank. If the file contains any lines before
 
 Configuration files contain instructions for the CSV processing. You can find a lot of common config files in the **[configuration file repository](https://github.com/firefly-iii/import-configurations)**.
 
-If you want to know more about how the JSON file works, check out [this help page about the JSON configuration file](https://firefly-iii.gitbook.io/firefly-iii-csv-importer/help/json).
+If you want to know more about how the JSON file works, check out [this help page about the JSON configuration file](../help/json.md).
 
 ## Pre-uploaded configuration files
 
@@ -30,8 +30,5 @@ It is then up to you to select one (or not) and it will be used.
 
 - The file must be UTF8 encoded.
 - No extra text may be present before or after the data.
-
-
-
 
 ![Upload files.](./images/upload.png)

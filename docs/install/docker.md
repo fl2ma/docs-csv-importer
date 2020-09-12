@@ -4,11 +4,17 @@ There are a few ways to use the CSV importer with Docker.
 
 There are some *gotchas* when it comes to Docker and IP addresses, so please check out the instructions at the bottom of the page.
 
-The CSV import uses the Firefly III API. Read more about the API on [this page](https://docs.firefly-iii.org/api/api).
+The CSV import uses the Firefly III API. Read more about the API in [the Firefly III documentation](https://docs.firefly-iii.org/api/api).
 
 ## Run as a web server
 
-This is the easiest way to run the CSV importer. Simply use the following run command to launch the CSV importer.
+This is the easiest way to run the CSV importer. Since there are a few ways [to configure the CSV importer to run](configure.md), your milage may vary. 
+
+Referring to the three ways to run the CSV importer on that [configuration page](configure.md), here are three ways to launch the CSV importer.
+
+### Web server with personal access token
+
+Use the following run command to launch the CSV importer.
 
 ```bash
 docker run \
@@ -21,6 +27,49 @@ fireflyiii/csv-importer:latest
 ```
 
 By running this script, you will start a web server on port 8081 that will allow you to import data. You should append the command with your Personal Access Token and Firefly III URL.
+
+### Web server with a client ID
+
+Use the following run command to launch the CSV importer.
+
+```bash
+docker run \
+--rm \
+-e FIREFLY_III_CLIENT_ID= \
+-e FIREFLY_III_URI= \
+-p 8081:80 \
+fireflyiii/csv-importer:latest
+
+```
+
+By running this script, you will start a web server on port 8081 that will allow you to import data. Append the command with your Client ID and Firefly III URL.
+
+### Web server with no configuration
+
+Use the following run command to launch the CSV importer.
+
+```bash
+docker run \
+--rm \
+-e FIREFLY_III_URI= \
+-p 8081:80 \
+fireflyiii/csv-importer:latest
+
+```
+
+By running this script, you will start a web server on port 8081 that will allow you to import data. Append the command with your Firefly III URL.
+
+### Useful scripts
+
+The Docker GitHub repository has some useful scripts to get you started. They're ready-made and all you need to do it add configuration values.
+
+- [run-hosted.sh](https://raw.githubusercontent.com/firefly-iii/csv-importer-docker/main/run-hosted.sh) in combination with your Personal Access Token and Firefly III URL.
+- [run-client-id.sh](https://raw.githubusercontent.com/firefly-iii/csv-importer-docker/main/run-client-id.sh) in combination with your Client ID and Firefly III URL.
+- [run-empty.sh](https://raw.githubusercontent.com/firefly-iii/csv-importer-docker/main/run-empty.sh) in combination with your Firefly III URL.
+
+
+
+
 
 Here are some tricks to make it easier for yourself:
 

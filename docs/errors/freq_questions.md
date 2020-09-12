@@ -2,7 +2,7 @@
 
 ## How do I start over or reset the importer?
 
-Browse to `/flush` on your CSV importer. This will reset it.
+Browse to `/flush` on your CSV importer. This will reset it. There is also a button.
 
 ## My connection times out, even though the IP addresses are correct
 

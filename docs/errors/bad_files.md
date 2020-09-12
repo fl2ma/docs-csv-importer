@@ -4,7 +4,7 @@ Some banks deliver abysmal CSV files. They have an interest to keep you inside t
 
 ## File is not UTF-8
 
-Use an application like Notepad++, Atom, Visual Studio Code or Sublime Text to convert the file to UTF-8.
+Use an application like Notepad++, Atom, Visual Studio Code or Sublime Text to convert the file to UTF-8. The CSV importer is incapable of doing this for you.
 
 ## Not enough info to make rows unique
 
