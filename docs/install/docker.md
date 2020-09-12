@@ -67,10 +67,6 @@ The Docker GitHub repository has some useful scripts to get you started. They're
 - [run-client-id.sh](https://raw.githubusercontent.com/firefly-iii/csv-importer-docker/main/run-client-id.sh) in combination with your Client ID and Firefly III URL.
 - [run-empty.sh](https://raw.githubusercontent.com/firefly-iii/csv-importer-docker/main/run-empty.sh) in combination with your Firefly III URL.
 
-
-
-
-
 Here are some tricks to make it easier for yourself:
 
 ### Use pre-defined script

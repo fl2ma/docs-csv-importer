@@ -20,13 +20,42 @@ You can generate your own Personal Access Token on the Profile page. Login to yo
 
 The Personal Access Token is pretty long. Use a tool like Notepad++ or Visual Studio Code to copy-and-paste it.
 
+![Click the right button.](images/pat1.png)
+
+![Give the personal access token a name.](images/pat2.png)
+
+![Copy and paste the token for use in the importer.](images/pat3.png)
+
 ## Client ID
 
-You can generate your own client ID on your Profile page (under OAuth). Create a new client. Make sure you uncheck the "confidential" checkbox.
+You can generate your own client ID on your Profile page (under OAuth). This is the ID you need when you want to share the CSV importer with multiple people, or when you want to allow others to use the same instance of the CSV importer.
+
+Make sure you uncheck the "confidential" checkbox. 
+
+It is **very important** that the callback URL is correct. The callback is the following:
+
+```
+http://[CSV IMPORTER]/callback
+```
+
+Some common examples include:
+
+* [http://172.16.0.2/callback](http://172.16.0.2/callback) (172.0 is a common IP range for Docker hosts)
+* [https://csv-importer.home/callback](https://csv-importer.home/callback) (Some users have fancy local addresses. Notice the TLS)
+* [http://10.0.0.15/callback](http://10.0.0.15/callback) (10.0.0.x is often used when using Vagrant)
+
+But ALWAYS add `/callback` or you'll run into weird errors later.
+
+![This is the correct client ID](images/cid1.png)
+
+![Fill in the details correctly](images/cid2.png)
+
 
 ## URL or IP
 
 You need to know the IP address or website address of your own Firefly III instances. In many cases this is simply `http://localhost`, but if you're a fancy user it might be something like `https://finances.example.com` or something similar.
+
+You should know this when generating the token (see above).
 
 ### Localhost and Docker? Be careful!
 
