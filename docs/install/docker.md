@@ -51,13 +51,12 @@ Use the following run command to launch the CSV importer.
 ```bash
 docker run \
 --rm \
--e FIREFLY_III_URI= \
 -p 8081:80 \
 fireflyiii/csv-importer:latest
 
 ```
 
-By running this script, you will start a web server on port 8081 that will allow you to import data. Append the command with your Firefly III URL.
+By running this script, you will start a web server on port 8081 that will allow you to import data.
 
 ### Useful scripts
 
@@ -65,13 +64,9 @@ The Docker GitHub repository has some useful scripts to get you started. They're
 
 - [run-hosted.sh](https://raw.githubusercontent.com/firefly-iii/csv-importer-docker/main/run-hosted.sh) in combination with your Personal Access Token and Firefly III URL.
 - [run-client-id.sh](https://raw.githubusercontent.com/firefly-iii/csv-importer-docker/main/run-client-id.sh) in combination with your Client ID and Firefly III URL.
-- [run-empty.sh](https://raw.githubusercontent.com/firefly-iii/csv-importer-docker/main/run-empty.sh) in combination with your Firefly III URL.
+- [run-empty.sh](https://raw.githubusercontent.com/firefly-iii/csv-importer-docker/main/run-empty.sh).
 
 Here are some tricks to make it easier for yourself:
-
-### Use pre-defined script
-
-Use [run-hosted.sh](https://github.com/firefly-iii/csv-importer-docker/blob/master/run-hosted.sh) to make it easier to manage your Personal Access Token.
 
 ### Append "-d"
 
@@ -80,6 +75,8 @@ Change `docker run` to `docker run -d` to make sure the image runs in the backgr
 ## Run inline
 
 This command will launch the CSV importer which will then try to import whatever it finds in the current directory. This is fully automated. It works by mounting the current directory to `/import` and importing all CSV files found inside of it.
+
+As you can tell from the parameters, this little trick only works when you use a [personal access token](configure.md).
 
 ```bash
 docker run \
