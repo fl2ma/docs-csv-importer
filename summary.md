@@ -9,6 +9,7 @@
 ## Help
 
 * [The JSON file](docs/help/json.md)
+* [Public installation](docs/help/public.md)
 
 ## Upgrading
 
