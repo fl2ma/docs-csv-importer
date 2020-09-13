@@ -20,11 +20,15 @@ You can generate your own Personal Access Token on the Profile page. Login to yo
 
 The Personal Access Token is pretty long. Use a tool like Notepad++ or Visual Studio Code to copy-and-paste it.
 
+The CSV importer needs no further configuration when you use this option.
+
 ![Click the right button.](images/pat1.png)
 
 ![Give the personal access token a name.](images/pat2.png)
 
 ![Copy and paste the token for use in the importer.](images/pat3.png)
+
+![Authentication is reported.](images/pat4.png)
 
 ## Client ID
 
@@ -49,6 +53,37 @@ But ALWAYS add `/callback` or you'll run into weird errors later.
 ![This is the correct client ID](images/cid1.png)
 
 ![Fill in the details correctly](images/cid2.png)
+
+## Client ID with URL
+
+When configuring the CSV importer, you can use both the Client ID and your Firefly III URL to configure the CSV importer.
+
+```
+FIREFLY_III_URI=http://firefly.example.com
+FIREFLY_III_CLIENT_ID=11
+
+-e FIREFLY_III_URI=http://firefly.example.com -e FIREFLY_III_CLIENT_ID=11
+```
+
+![Fixed client ID and fixed Firefly III URL](images/config1.png)
+
+## Client ID without URL
+
+But you can also choose to omit the Client ID for flexibility (multi user):
+
+```
+FIREFLY_III_URI=http://firefly.example.com
+
+-e FIREFLY_III_URI=http://firefly.example.com
+```
+
+![Flexible client ID and fixed Firefly III URL](images/config1.png)
+
+## No URL and no Client ID
+
+Finally, you can also decide to set up the CSV importer with *no* details at all. This will force the user to submit a valid Firefly III URL and a valid Client ID.
+
+![User submitted client ID and URL.](images/config1.png)
 
 
 ## URL or IP
