@@ -94,13 +94,13 @@ FIREFLY_III_URI=http://firefly.example.com
 -e FIREFLY_III_URI=http://firefly.example.com
 ```
 
-![Flexible client ID and fixed Firefly III URL](images/config1.png)
+![Flexible client ID and fixed Firefly III URL](images/config2.png)
 
 ## No URL and no Client ID
 
 Finally, you can also decide to set up the CSV importer with *no* details at all. This will force the user to submit a valid Firefly III URL and a valid Client ID.
 
-![User submitted client ID and URL.](images/config1.png)
+![User submitted client ID and URL.](images/config3.png)
 
 
 ## URL or IP
