@@ -2,12 +2,10 @@
 
 There are a few pieces of configuration required for the Firefly III CSV import tool. It depends on how you want to run the CSV importer:
 
-You will *always* need the URL / IP address of your Firefly III instance.
+The choice is yours:
 
-Then, the choice is yours:
-
-1. A Personal Access Token. Use this method when you're the only one using the CSV importer and you're sure of its security.
-2. A Client ID. Use this method when you're the only one using the CSV importer, but you want extra confirmation before it'll work.
+1. A Personal Access Token + Firefly III URL. Use this method when you're the only one using the CSV importer and you're sure of its security.
+2. A Client ID + Firefly III URL. Use this method when you're the only one using the CSV importer, but you want extra confirmation before it'll work.
 3. *Nothing*, which is easiest to configure but requires some extra configuration during use.
 
 ## Configuration location
