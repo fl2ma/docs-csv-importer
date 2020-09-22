@@ -5,20 +5,39 @@ There are a few pieces of configuration required for the Firefly III CSV import 
 The choice is yours:
 
 1. A Personal Access Token + Firefly III URL. Use this method when you're the only one using the CSV importer and you're sure of its security.
-2. A Client ID + Firefly III URL. Use this method when you're the only one using the CSV importer, but you want extra confirmation before it'll work.
-3. *Nothing*, which is easiest to configure but requires some extra configuration during use.
+2. A Client ID and the Firefly III URL. Both values are optional. This gives you some interesting combinations to use the CSV importer.
+
+{% hint style="info" %}
+
+How to get a Personal Access Token or a Client ID is explained below.
+
+{% endhint %}
+
+If you do not want to use the "Personal Access Token" option, you can set the Client ID and/or the Firefly III URL. The result is:
+
+1. If you set both, the CSV importer will work for you alone but a fresh confirmation is required each time you open the CSV importer.
+2. If you only set the Firefly III URL, everybody with a valid Client ID can use the CSV importer on the specified URL.
+3. If you set nothing, each user must submit the Client ID and the Firefly III URL themselves.
 
 ## Configuration location
 
-The configuration values are stored in environment variables, `FIREFLY_III_URI`, `FIREFLY_III_ACCESS_TOKEN` and `FIREFLY_III_CLIENT_ID` respectively. You can use the `.env` file to store them, use Docker's `-e` flag to set them or use your operating system to set these values.
+The configuration values are stored in environment variables:
 
-## Personal Access Token
+* `FIREFLY_III_URI`
+* `FIREFLY_III_ACCESS_TOKEN`
+* `FIREFLY_III_CLIENT_ID`
+
+You can use the `.env` file to store them, use Docker's `-e` flag to set them or use your operating system to set these values. 
+
+Remember, you can skip all three if you want to.
+
+## Personal Access Token + Firefly III URL
 
 You can generate your own Personal Access Token on the Profile page. Login to your Firefly III instance, go to "Options" > "Profile" and find the "Personal Access Tokens" at the bottom of the page. Create a new Personal Access Token by clicking on "Create New Token". Give it a recognizable name and press "Create".
 
 The Personal Access Token is pretty long. Use a tool like Notepad++ or Visual Studio Code to copy-and-paste it.
 
-The CSV importer needs no further configuration when you use this option.
+After setting the Personal Access Token and the Firefly III URL, the CSV importer needs no further configuration when you use this option.
 
 ![Click the right button.](images/pat1.png)
 
@@ -28,7 +47,7 @@ The CSV importer needs no further configuration when you use this option.
 
 ![Authentication is reported.](images/pat4.png)
 
-## Client ID
+## Client ID + Firefly III URL
 
 You can generate your own client ID on your Profile page (under OAuth). This is the ID you need when you want to share the CSV importer with multiple people, or when you want to allow others to use the same instance of the CSV importer.
 
