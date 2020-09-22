@@ -21,7 +21,7 @@ docker run \
 --rm \
 -e FIREFLY_III_ACCESS_TOKEN= \
 -e FIREFLY_III_URI= \
--p 8081:80 \
+-p 8081:8080 \
 fireflyiii/csv-importer:latest
 
 ```
@@ -37,7 +37,7 @@ docker run \
 --rm \
 -e FIREFLY_III_CLIENT_ID= \
 -e FIREFLY_III_URI= \
--p 8081:80 \
+-p 8081:8080 \
 fireflyiii/csv-importer:latest
 
 ```
@@ -51,7 +51,7 @@ Use the following run command to launch the CSV importer.
 ```bash
 docker run \
 --rm \
--p 8081:80 \
+-p 8081:8080 \
 fireflyiii/csv-importer:latest
 
 ```
@@ -124,7 +124,7 @@ docker run -d \
 --name fireflyiii \
 -v firefly_iii_export:/var/www/firefly-iii/storage/export \
 -v firefly_iii_upload:/var/www/firefly-iii/storage/upload \
--p 80:80 \
+-p 8081:8080 \
 -e APP_KEY=123456789012345678901234567890aa \
 -e DB_HOST=172.17.0.2 \
 -e DB_CONNECTION=mysql \
