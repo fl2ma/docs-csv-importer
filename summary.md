@@ -23,6 +23,7 @@
 * [Setting roles for columns](docs/usage/roles.md)
 * [Mapping data](docs/usage/map.md)
 * [Importing over command line](docs/usage/command_line.md)
+* [Importing using POST](docs/usage/post.md)
 
 
 ## Errors and trouble shooting
