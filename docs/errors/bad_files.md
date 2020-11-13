@@ -18,6 +18,7 @@ By default, Firefly III will skip saving the second transfer because the first o
 
 - The second transfer has another transaction ID.
 - The second transfer has a different description.
+- In the second transfer, any other meta-data is different (notes, links, etc).
 
 You'll have to manually edit your file so the transactions are the same.
 
