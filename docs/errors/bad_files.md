@@ -16,7 +16,7 @@ The CSV importer is capable of merging two transactions (one from A > B, and one
 
 By default, Firefly III will skip saving the second transfer because the first one already exists. The second is recognized as a duplicate because all the fields are the same. This may not always be the case. Examples that will stop this from happening are:
 
-- The second transfer has another transaction ID.
+- The second transfer has another internal transaction reference (bunq does this).
 - The second transfer has a different description.
 - In the second transfer, any other meta-data is different (notes, links, etc).
 
