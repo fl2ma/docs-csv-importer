@@ -8,13 +8,22 @@ Use an application like Notepad++, Atom, Visual Studio Code or Sublime Text to c
 
 ## Not enough info to make rows unique
 
-If you don't specifically configure the importer to import non-unique rows, open the file in Excel or Numbers and add a row with a basic sequence: 1,2,3,4 etc. That should be enough to make the rows unique.
+If you don't specifically configure the importer to import non-unique rows, open the file in Excel or Numbers and add a row with a basic sequence: 1,2,3,4 etc. That should be enough to make the rows unique. There is also a "specific" that adds a hash, making each row unique.
 
 ## Transfers aren't merged
 
 The CSV importer is capable of merging two transactions (one from A > B, and one from B < A) if they seem to be the same transaction listed twice. For example, when you import two files: one from your checking account and one from your savings account.
 
-If they don't have the same description, this won't work. You'll have to manually edit your file so the transactions are the same.
+By default, Firefly III will skip saving the second transfer because the first one already exists. The second is recognized as a duplicate because all the fields are the same. This may not always be the case. Examples that will stop this from happening are:
+
+- The second transfer has another transaction ID.
+- The second transfer has a different description.
+
+You'll have to manually edit your file so the transactions are the same.
+
+You can't do this by applying rules to your transfers. Rules are only executed on transactions that are already stored in Firefly III. If your rule changes a transfer into a duplicate of another transfer, this won't make the system delete it.
+
+You can however, create custom rules that trigger on any content in the second transfer, and then delete it.
 
 ## Other issues?
 
