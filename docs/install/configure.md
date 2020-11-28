@@ -1,11 +1,27 @@
 # Configure installation
 
-There are a few pieces of configuration required for the Firefly III CSV import tool. It depends on how you want to run the CSV importer:
+The CSV importer communicates with Firefly III over the [API](https://docs.firefly-iii.org/api/api). You can supply the CSV importer with a few pieces of information to make it easy to connect to your Firefly III.
 
-The choice is yours:
+None of the following is mandatory, it will work if you don't do this beforehand.
 
-1. A Personal Access Token + Firefly III URL. Use this method when you're the only one using the CSV importer and you're sure of its security.
-2. A Client ID and the Firefly III URL. Both values are optional. This gives you some interesting combinations to use the CSV importer.
+{% hint style="info" %}
+
+How to set `ALL_CAPS` variables is explained on the bottom of the page.
+
+{% endhint %}
+
+## Firefly III URL
+
+You must tell the CSV importer where to reach Firefly III. This is set in the `FIREFLY_III_URL` environment variable. 
+
+### Vanity URL
+
+For Docker, you may be able to your the internal IP address of Firefly III, instead of its public address. But if normal users can't reach this URL, you must also set the `VANITY_URL`. Here is an example:
+
+* `FIREFLY_III_URL=http://172.16.2.2:8080` (internal Docker URL)
+* `VANITY_URL=https://money.bill-gates.com` (public or local URL)
+
+## Client ID or Personal Access Token
 
 {% hint style="info" %}
 
@@ -13,11 +29,26 @@ How to get a Personal Access Token or a Client ID is explained below.
 
 {% endhint %}
 
-If you do not want to use the "Personal Access Token" option, you can set the Client ID and/or the Firefly III URL. The result is:
+In order to get data from the Firefly III API, you need to be authenticated. There are two options to do so:
 
-1. If you set both, the CSV importer will work for you alone but a fresh confirmation is required each time you open the CSV importer.
-2. If you only set the Firefly III URL, everybody with a valid Client ID can use the CSV importer on the specified URL.
-3. If you set nothing, each user must submit the Client ID and the Firefly III URL themselves.
+1. Set a Client ID in the `FIREFLY_III_CLIENT_ID` environment variable.
+2. Set a Personal Access Token in the `FIREFLY_III_ACCESS_TOKEN` environment variable.
+
+The Client ID is used when you wish to re-authenticate to Firefly III (almost) every time you use the CSV importer. This can be useful when you want to secure access to the CSV importer. The CSV importer itself has no authentication in front of it.
+
+Use the Personal Access Token when you trust the installation of the CSV importer can't be reached by other users.
+
+### No Client ID or Personal Access Token
+
+When you set neither a Client ID nor a Personal Access Token, you must enter a client ID every time you run the CSV importer. This can be useful when multiple people wish to use the same CSV importer (on the same Firefly III instance).
+
+### No Firefly III URL
+
+When you don't set the Firefly III URL, people must always submit the Firefly III installation they wish to connect to, together with a Client ID. This can be useful when you want the CSV importer to serve multiple instances of Firefly III
+
+## Access
+
+If you set both the Client ID and the Firefly III URL, the CSV importer will work for you alone but a fresh confirmation is required each time you open the CSV importer. If you only set the Firefly III URL, everybody with a valid Client ID can use the CSV importer on the specified URL. If you set nothing, each user must submit the Client ID and the Firefly III URL themselves.
 
 ## Configuration location
 
@@ -61,7 +92,7 @@ http://[CSV IMPORTER]/callback
 
 Some common examples include:
 
-* [http://172.16.0.2/callback](http://172.16.0.2/callback) (172.0 is a common IP range for Docker hosts)
+* [http://172.16.0.2/callback](http://172.16.0.2/callback) (172.16 is a common IP range for Docker hosts)
 * [https://csv-importer.home/callback](https://csv-importer.home/callback) (Some users have fancy local addresses. Notice the TLS)
 * [http://10.0.0.15/callback](http://10.0.0.15/callback) (10.0.0.x is often used when using Vagrant)
 
