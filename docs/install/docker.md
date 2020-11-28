@@ -10,17 +10,7 @@ You should really read the [configuration page](configure.md) first!
 
 {% endhint %}
 
-
-## Run as a web server
-
-
-
-
-This is the easiest way to run the CSV importer. Since there are a few ways [to configure the CSV importer to run](configure.md).
-
-Referring to the three ways to run the CSV importer on that [configuration page](configure.md), here are three ways to launch the CSV importer.
-
-### Web server with personal access token
+## Web server with personal access token
 
 Use the following run command to launch the CSV importer.
 
@@ -28,15 +18,15 @@ Use the following run command to launch the CSV importer.
 docker run \
 --rm \
 -e FIREFLY_III_ACCESS_TOKEN= \
--e FIREFLY_III_URI= \
+-e FIREFLY_III_URL= \
 -p 8081:8080 \
 fireflyiii/csv-importer:latest
 
 ```
 
-By running this script, you will start a web server on port 8081 that will allow you to import data. You should append the command with your Personal Access Token and Firefly III URL.
+By running this script, you will start a web server on port 8081 that will allow you to import data. You should append the command with your Personal Access Token and Firefly III URL. You should really read the [configuration page](configure.md) on how to get these values.
 
-### Web server with a client ID
+## Web server with a client ID
 
 Use the following run command to launch the CSV importer.
 
@@ -44,15 +34,15 @@ Use the following run command to launch the CSV importer.
 docker run \
 --rm \
 -e FIREFLY_III_CLIENT_ID= \
--e FIREFLY_III_URI= \
+-e FIREFLY_III_URL= \
 -p 8081:8080 \
 fireflyiii/csv-importer:latest
 
 ```
 
-By running this script, you will start a web server on port 8081 that will allow you to import data. Append the command with your Client ID and Firefly III URL.
+By running this script, you will start a web server on port 8081 that will allow you to import data. Append the command with your Client ID and Firefly III URL. You should really read the [configuration page](configure.md) on how to get these values.
 
-### Web server with no configuration
+## Web server with no configuration
 
 Use the following run command to launch the CSV importer.
 
@@ -91,7 +81,7 @@ docker run \
 --rm \
 -v $PWD:/import \
 -e FIREFLY_III_ACCESS_TOKEN= \
--e FIREFLY_III_URI= \
+-e FIREFLY_III_URL= \
 -e WEB_SERVER=false \
 fireflyiii/csv-importer:latest
 ```
@@ -102,7 +92,7 @@ This can also be made easier for yourself:
 
 ### Use pre-defined script
 
-Use [run-inline.sh](https://github.com/firefly-iii/csv-importer-docker/blob/master/run-inline.sh) to make it easier to manage your Personal Access Token. You can also customize the directory that the script will use as well.
+Use [run-inline.sh](https://github.com/firefly-iii/csv-importer-docker/blob/main/run-inline.sh) to make it easier to manage your Personal Access Token. You can also customize the directory that the script will use as well.
 
 ## Docker and IP addresses
 
