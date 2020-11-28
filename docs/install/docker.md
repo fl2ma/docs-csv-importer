@@ -1,14 +1,22 @@
 # Docker
 
-There are a few ways to use the CSV importer with Docker.
-
-There are some *gotchas* when it comes to Docker and IP addresses, so please check out the instructions at the bottom of the page.
+There are a few ways to use the CSV importer and Docker. There are some *gotchas* when it comes to Docker and IP addresses, so please check out the instructions at the bottom of the page.
 
 The CSV import uses the Firefly III API. Read more about the API in [the Firefly III documentation](https://docs.firefly-iii.org/api/api).
 
+{% hint style="warning" %}
+
+You should really read the [configuration page](configure.md) first! 
+
+{% endhint %}
+
+
 ## Run as a web server
 
-This is the easiest way to run the CSV importer. Since there are a few ways [to configure the CSV importer to run](configure.md), your milage may vary. 
+
+
+
+This is the easiest way to run the CSV importer. Since there are a few ways [to configure the CSV importer to run](configure.md).
 
 Referring to the three ways to run the CSV importer on that [configuration page](configure.md), here are three ways to launch the CSV importer.
 
