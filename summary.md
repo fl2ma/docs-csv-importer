@@ -2,14 +2,15 @@
 
 ## Installing and running
 
+* [Configuration](docs/install/configure.md)
 * [Docker](docs/install/docker.md)
 * [Self-hosted](docs/install/self_hosted.md)
 * [Public installation](docs/help/public.md)
-* [Configuration](docs/install/configure.md)
 
 ## Help
 
 * [The JSON file](docs/help/json.md)
+* [Pre-made configuration](docs/help/config.md)
 * [Public installation](docs/help/public.md)
 
 ## Upgrading
