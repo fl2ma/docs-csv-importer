@@ -54,7 +54,7 @@ If you set both the Client ID and the Firefly III URL, the CSV importer will wor
 
 The configuration values are stored in environment variables:
 
-* `FIREFLY_III_URI`
+* `FIREFLY_III_URL`
 * `FIREFLY_III_ACCESS_TOKEN`
 * `FIREFLY_III_CLIENT_ID`
 
@@ -107,10 +107,10 @@ But ALWAYS add `/callback` or you'll run into weird errors later.
 When configuring the CSV importer, you can use both the Client ID and your Firefly III URL to configure the CSV importer.
 
 ```
-FIREFLY_III_URI=http://firefly.example.com
+FIREFLY_III_URL=http://firefly.example.com
 FIREFLY_III_CLIENT_ID=11
 
--e FIREFLY_III_URI=http://firefly.example.com -e FIREFLY_III_CLIENT_ID=11
+-e FIREFLY_III_URL=http://firefly.example.com -e FIREFLY_III_CLIENT_ID=11
 ```
 
 ![Fixed client ID and fixed Firefly III URL](images/config1.png)
@@ -120,9 +120,9 @@ FIREFLY_III_CLIENT_ID=11
 But you can also choose to omit the Client ID for flexibility (multi user):
 
 ```
-FIREFLY_III_URI=http://firefly.example.com
+FIREFLY_III_URL=http://firefly.example.com
 
--e FIREFLY_III_URI=http://firefly.example.com
+-e FIREFLY_III_URL=http://firefly.example.com
 ```
 
 ![Flexible client ID and fixed Firefly III URL](images/config2.png)
