@@ -8,6 +8,10 @@ If you don't have one, search the web to find out how to get one. Make sure you'
 2. [Upgrade Ubuntu PHP 7.4](https://www.google.com/search?q=upgrade+ubuntu+php+7.4)
 3. [PHP 7.4 raspberry pi](https://www.google.nl/search?q=PHP+7.4+raspberry+pi)
 
+Also check out these user guides:
+
+1. [CSV importer on Ubuntu with proxmox](https://gist.github.com/Engr-AllanG/e87f827092e3a6b876b912cd897428ae)
+
 You won't need to set up a database.
 
 ## Preparing your server
@@ -37,7 +41,7 @@ composer -v
 
 If you have no sudo rights, you can simply [download composer](https://getcomposer.org/download/). Use `php composer.phar` instead of `composer` in the instructions ahead.
 
-This concludes the server preparations. If you're having trouble with (parts of) this step, please check out [the FAQ](https://firefly-iii.gitbook.io/firefly-iii-csv-importer/errors-and-trouble-shooting/freq_questions) or open an issue [on GitHub](https://github.com/firefly-iii/firefly-iii).
+This concludes the server preparations. If you're having trouble with (parts of) this step, please check out [the FAQ](https://csv-docs.firefly-iii.org/errors-and-trouble-shooting/freq_questions) or open an issue [on GitHub](https://github.com/firefly-iii/firefly-iii).
 
 ## Installing Firefly III CSV importer
 
