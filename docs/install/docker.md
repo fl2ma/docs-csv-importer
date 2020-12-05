@@ -94,9 +94,23 @@ This can also be made easier for yourself:
 
 Use [run-inline.sh](https://github.com/firefly-iii/csv-importer-docker/blob/main/run-inline.sh) to make it easier to manage your Personal Access Token. You can also customize the directory that the script will use as well.
 
-## Docker and IP addresses
+## Docker container communication
+When following the instructions above, CSV importer runs in a separate container than firefly itself. The communication between those containers can be done either by docker internal IPs or internal urls.
+If you run the CSV Importer, the IP address you need to contact Firefly III isn't 127.0.0.1, even when you run Firefly III on the same machine. Docker uses an internal network.
 
-If you run the CSV Importer, the IP address you need to contact Firefly III isn't 127.0.0.1, even when you run Firefly III on the same machine. Docker uses an internal network. There's a good chance your Firefly III installation has an IP address that starts with 172.17. You can find out the internal IP address of Firefly III using this command:
+### URL in Docker
+Docker comes with it's own DNS. If you are running docker in a standard configuration, docker containers can communicate with each other via internal urls.
+The url of a docker container usually equals it's service name (e.g. as defined in your docker-compose.yml). This means you can set the url parameter as follows:
+```
+FIREFLY_III_URL=http://fireflyiii:8080
+
+-e FIREFLY_III_URL=http://fireflyiii:8080
+```
+
+Note that you do **not** need to add /callback here.
+
+### Docker-internal IP
+Should you whish to use IP instead, you need to find out your container's IP first. There's a good chance your Firefly III installation has an IP address that starts with 172.17. You can find out the internal IP address of Firefly III using this command:
 
 ```bash
 docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' CONTAINER
